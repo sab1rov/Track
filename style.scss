@@ -1,0 +1,1114 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@200;300;400;500;600;700&family=PT+Sans:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    background: #e5e5e5;
+}
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+// H E A D E R - S T A R T //
+
+.header-bg {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40%;
+        height: 100%;
+        background: #0b7572;
+        z-index: 1;
+    }
+}
+
+.header {
+    padding-top: 110px;
+    display: flex;
+    max-width: 100%;
+    position: relative;
+    padding-bottom: 100px;
+    z-index: 2;
+    height: 120vh;
+
+    &__left {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 80px;
+
+        &-text {
+            font-family: 'Exo 2';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 52px;
+            line-height: 125%;
+            color: #363738;
+            margin-bottom: 40px;
+        }
+
+        &-def {
+            font-family: 'PT Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: #6b6b6c;
+            margin-bottom: 40px;
+        }
+
+        &-a {
+            position: relative;
+            font-family: 'PT Sans', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 150%;
+            color: #363738;
+            text-decoration: none;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 3px;
+                background-color: #ffce50;
+            }
+        }
+    }
+
+    &__right {
+        width: 50%;
+        img {
+            width: 100%;
+            height: 505px;
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 100px;
+    }
+}
+
+// H E A D E R - E N D //
+
+// M A N U F A C T U R E - S T A R T //
+
+.manufacture {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background: #ffffff;
+    width: 100%;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    padding: 40px 65px;
+    transform: translateY(-50%);
+    z-index: 30;
+
+    &__item {
+        width: 30%;
+        padding-right: 100px;
+        &-svg {
+            margin-bottom: 24px;
+        }
+
+        &-title {
+            font-family: 'Exo 2', sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 135%;
+            color: #363738;
+            margin-bottom: 16px;
+        }
+
+        &-desc {
+            font-family: 'PT Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: #6b6b6c;
+        }
+
+        &:not(:last-child) {
+            border-right: 1px solid #d7d7dd;
+        }
+    }
+
+    @media screen and(max-width:768px) {
+        flex-direction: column;
+        width: 100%;
+        background: transparent;
+    }
+}
+
+// M A N U F A C T U R E - E N D //
+
+// S P H E R E - S T A R T //
+
+.sphere {
+    &__title {
+        font-family: 'Exo 2', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 125%;
+        color: #363738;
+        margin-bottom: 30px;
+    }
+
+    &__desc {
+        font-family: 'PT Sans', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #6b6b6c;
+        margin-bottom: 40px;
+        max-width: 665px;
+    }
+
+    &__flex {
+        display: flex;
+
+        &-boxes {
+            width: 50%;
+        }
+
+        .sphere__box {
+            position: relative;
+            display: flex;
+            background: #ffffff;
+            box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.12);
+            border-radius: 10px;
+            width: 685px;
+            height: 175px;
+            margin-bottom: 16px;
+            padding: 40px;
+            overflow: hidden;
+            transition: all 1 ease;
+            border: 1px solid transparent;
+            &:hover {
+                border-color: #0b7572;
+            }
+
+            &-input {
+                margin-right: 32px;
+            }
+
+            &-title {
+                font-family: 'Exo 2', sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 150%;
+                color: #363738;
+            }
+
+            &-desc {
+                font-family: 'PT Sans', sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                color: #6b6b6c;
+                max-width: 460px;
+            }
+
+            &-triangle {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                background: #e9e9ec;
+                width: 190px;
+                height: 60px;
+                clip-path: polygon(100% 0, 0 100%, 100% 100%);
+            }
+        }
+
+        .sphere__voted {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            &-title {
+                font-family: 'Exo 2';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 150%;
+                color: #363738;
+            }
+
+            &-desc {
+                display: flex;
+                border-bottom: 3px solid #ffce50;
+            }
+
+            &-num {
+                font-family: 'Exo 2', sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 54px;
+                line-height: 150%;
+                letter-spacing: 0.3em;
+                color: #363738;
+            }
+
+            &-def {
+                font-family: 'Exo 2', sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 150%;
+                color: #6b6b6c;
+                margin-top: 35px;
+            }
+        }
+    }
+}
+
+// S P H E R E - E N D //
+
+// P R O F I T - S T A R T //
+
+.profit-bg {
+    position: relative;
+    padding-bottom: 120px;
+    &::after {
+        content: '';
+        position: absolute;
+        background: #0b7572;
+        width: 925px;
+        height: 453px;
+        left: 0;
+        top: 0;
+        clip-path: polygon(0 0, 56% 0, 100% 100%, 0% 100%);
+    }
+}
+
+.profit {
+    position: relative;
+    display: flex;
+    margin-top: 84px;
+    margin-bottom: 72px;
+
+    &__left {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+
+        &-title {
+            font-family: 'Exo 2', sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 125%;
+            color: #ffffff;
+        }
+    }
+
+    &__right {
+        &::before {
+            background: #0b75724d;
+            clip-path: polygon(0 0, 31% 0, 100% 100%, 70% 100%);
+        }
+    }
+}
+
+.why {
+    display: flex;
+    flex-wrap: wrap;
+    &__us {
+        display: flex;
+        width: 50%;
+
+        &-def {
+            margin-left: 40px;
+        }
+        &-title {
+            font-family: 'Exo 2';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 135%;
+            color: #363738;
+            margin-bottom: 10px;
+        }
+
+        &-desc {
+            font-family: 'PT Sans', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: #6b6b6c;
+        }
+    }
+}
+
+// P R O F I T - E N D //
+
+// W O R K - S T A R T //
+
+.work {
+    &__desc {
+        &-title {
+            font-family: 'Exo 2', sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 125%;
+            color: #363738;
+            margin-bottom: 30px;
+        }
+
+        &-def {
+            font-family: 'PT Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: #6b6b6c;
+            margin-bottom: 55px;
+        }
+    }
+
+    &__boxes {
+        display: flex;
+        align-items: stretch;
+
+        &-box {
+            height: auto;
+            margin-right: 30px;
+            background: #ffffff;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
+            border-radius: 10px;
+        }
+
+        &-def {
+            padding: 24px 32px 32px 32px;
+        }
+
+        &-title {
+            font-family: 'Exo 2';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 135%;
+            color: #363738;
+            padding-bottom: 16px;
+        }
+
+        &-desc {
+            font-family: 'PT Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: #6b6b6c;
+            padding-bottom: 32px;
+        }
+
+        &-price {
+            display: inline-block;
+            font-family: 'Exo 2';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 135%;
+            color: #363738;
+            border-bottom: 3px solid #ffce50;
+        }
+    }
+
+    &__inputs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 56px;
+
+        &-input {
+            margin-right: 10px;
+        }
+    }
+}
+
+// W O R K - E N D //
+
+// C L I E N T S - S T A R T //
+
+.clients {
+    display: flex;
+    background: #0b7572;
+    margin-top: 120px;
+
+    &__desc {
+        h1 {
+            font-family: 'Exo 2';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 125%;
+            color: #ffffff;
+            padding: 95px 100px 0 65px;
+        }
+    }
+
+    &__info {
+        background: #ffffff;
+        padding: 40px;
+        margin: 85px 65px;
+
+        &-high {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            border-bottom: 1px solid #d7d7dd;
+            margin: 32px;
+        }
+
+        &-desc {
+            width: 275px;
+            font-family: 'PT Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 150%;
+            color: #6b6b6c;
+            padding-bottom: 32px;
+        }
+
+        &-table {
+            border-collapse: collapse;
+        }
+
+        &-tbody {
+            margin: 10px;
+            tr {
+                td {
+                    padding: 24px 16px;
+
+                    p {
+                        font-family: 'PT Sans';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 135%;
+                        color: #6b6b6c;
+                        padding-bottom: 10px;
+                    }
+                    span {
+                        font-family: 'Exo 2';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 135%;
+                        color: #363738;
+                        white-space: nowrap;
+                    }
+                    h3 {
+                        font-family: 'PT Sans';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 14px;
+                        line-height: 135%;
+                        color: #363738;
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+
+            tr:not(:last-child) {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        &-basic {
+            background: #0b7572;
+            margin-top: 32px;
+            margin-bottom: 8px;
+
+            th {
+                font-family: 'Exo 2';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 150%;
+                align-items: center;
+                color: #ffffff;
+                padding: 10px;
+            }
+
+            th:not(:last-child) {
+                border-right: 1px solid rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        &-details {
+            td:not(:last-child) {
+                border-right: 1px solid rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}
+
+// C L I E N T S - E N D //
+
+// S T E P S - S T A R T //
+
+.steps {
+    &__title {
+        h1 {
+            font-family: 'Exo 2';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 125%;
+            color: #363738;
+        }
+    }
+
+    &__boxes {
+        &-item {
+            display: flex;
+            //
+            background: #ffffff;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
+            border-radius: 10px;
+            // margin: 30px;
+            padding: 32px 96px;
+            &:not(:last-child) {
+                margin-bottom: 24px;
+            }
+        }
+
+        &-desc {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            padding-left: 56px;
+            h3 {
+                position: relative;
+                font-family: 'Exo 2';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 125%;
+                color: #363738;
+                margin-bottom: 48px;
+                // border-bottom: 3px solid ;
+                // border: 86px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    height: 2px;
+                    width: 86px;
+                    background: #ffce50;
+                    bottom: -24px;
+                    left: 0;
+                }
+            }
+            p {
+                font-family: 'PT Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                color: #6b6b6c;
+            }
+        }
+    }
+}
+
+// S T E P S - E N D //
+
+// C O M P A N Y - S T A R T //
+
+.company {
+    &__title {
+        h1 {
+            font-family: 'Exo 2';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 125%;
+            color: #363738;
+            padding-top: 120px;
+            padding-bottom: 90px;
+        }
+    }
+
+    &__logos {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        min-height: 185px;
+
+        &_two {
+            margin-top: 70px;
+        }
+
+        &-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            width: 25%;
+
+            &:not(:last-child) {
+                border-right: 1px solid #d7d7dd;
+            }
+        }
+
+        &-desc {
+            h3 {
+                font-family: 'Exo 2';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 135%;
+                text-align: center;
+                color: #363738;
+                padding-bottom: 14px;
+            }
+            p {
+                font-family: 'PT Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 150%;
+                text-align: center;
+                color: #6b6b6c;
+            }
+        }
+    }
+}
+
+// C O M P A N Y - E N D //
+
+// T E A M - S T A R T //
+
+.team {
+    &__title {
+        margin-top: 130px;
+        margin-bottom: 70px;
+        h1 {
+            font-family: 'Exo 2';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 125%;
+            color: #363738;
+        }
+    }
+
+    &__members {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &-info {
+            position: relative;
+            display: flex;
+            min-height: 210px;
+            width: 48%;
+            background: #ffffff;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+            padding: 35px 80px;
+            margin: 12px 0;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 50px;
+                background: #0b7572;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+        }
+        &-desc {
+            padding-left: 40px;
+            h3 {
+                font-family: 'Exo 2';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 24px;
+                color: #363738;
+                padding-bottom: 12px;
+            }
+
+            p {
+                position: relative;
+                font-family: 'PT Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 150%;
+                color: #6b6b6c;
+                padding-bottom: 16px;
+                // border-bottom: 2px solid #ffce50;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    width: 86px;
+                    height: 2px;
+                    background: #ffce50;
+                }
+            }
+        }
+        &-icons {
+            margin-top: 35px;
+
+            img {
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+// T E A M - E N D //
+
+// C O N T  A C T S - S T A R T //
+
+.contacts {
+    &__title {
+        margin-top: 130px;
+        margin-bottom: 80px;
+        h1 {
+            font-family: 'Exo 2';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 125%;
+            color: #363738;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        &-info {
+            width: 40%;
+            &-field {
+                display: flex;
+                align-items: flex-start;
+
+                div {
+                    margin-left: 32px;
+                    margin-bottom: 45px;
+                    p {
+                        font-family: 'PT Sans';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 150%;
+                        color: #6b6b6c;
+                        padding-bottom: 8px;
+                    }
+                    span {
+                        font-family: 'Exo 2';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 20px;
+                        line-height: 24px;
+                        color: #363738;
+                    }
+                }
+            }
+        }
+
+        &-table {
+            width: 60%;
+            background: #f9f9fb;
+            border-radius: 5px;
+            padding: 40px 48px;
+            &-item {
+                display: flex;
+                justify-content: space-between;
+
+                &:not(:last-child) {
+                    padding-bottom: 16px;
+                    border-bottom: 1px solid #e9eaf2;
+                }
+                &:not(:first-child) {
+                    margin-top: 32px;
+                }
+                p {
+                    font-family: 'PT Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 125%;
+                    color: #6b6b6c;
+                }
+
+                span {
+                    font-family: 'Exo 2';
+                    font-style: normal;
+                    max-width: 60%;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 125%;
+                    color: #363738;
+                }
+            }
+        }
+    }
+}
+
+// C O N T  A C T S - E N D //
+
+// F O R M - S T A R T //
+
+.form {
+    margin-top: 140px;
+    display: flex;
+
+    &__desc {
+        background: #0b7572;
+        // width: 700px;
+        width: 60%;
+        padding: 56px;
+
+        &-title {
+            margin-bottom: 70px;
+            h1 {
+                font-family: 'Exo 2';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 48px;
+                line-height: 125%;
+                color: #ffffff;
+            }
+        }
+
+        &-textarea {
+            padding-bottom: 56px;
+
+            textarea {
+                background: #0b7572;
+                font-family: 'PT Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 125%;
+                color: #ffffff;
+                border: none;
+                resize: none;
+            }
+        }
+
+        &-attach {
+            display: flex;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+            p {
+                font-family: 'PT Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 125%;
+                color: #ffffff;
+                margin-left: 16px;
+            }
+        }
+
+        &-photo {
+            display: flex;
+            margin-top: 32px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+            p {
+                font-family: 'PT Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 125%;
+                color: #ffffff;
+                margin-left: 16px;
+            }
+        }
+
+        &-btn {
+            margin-top: 65px;
+            button {
+                font-family: 'Exo 2';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 150%;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                color: #0b7572;
+                padding: 10px 20px;
+                border-radius: 4px;
+                border: none;
+            }
+        }
+    }
+
+    &__img {
+        width: 40%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-position: right;
+        }
+    }
+}
+
+// F O R M - E N D //
+
+// I N F O - S T A R T //
+
+.info {
+    margin-top: 120px;
+
+    &__title {
+        font-family: 'Exo 2';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 125%;
+        color: #363738;
+    }
+
+    &__table {
+        background: #f9f9fb;
+        border-radius: 5px;
+        margin-top: 50px;
+        padding: 48px 56px;
+
+     
+
+        &-title {
+            font-family: 'Exo 2';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 135%;
+            color: #363738;
+            margin-bottom: 16px;
+
+            &_margin{
+                margin-top: 40px;
+            }
+        }
+
+        
+        &-subtitle {
+            font-family: 'PT Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: #363738;
+            // margin-bottom: 40px;
+
+            &_underline {
+                border-bottom: 1px solid #363738;
+            }
+        }
+
+        &-tec {
+            &-doc {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        &-photo {
+            &-imgs {
+                display: flex;
+                align-items: center;
+
+                &-img{
+                    margin-right: 16px;
+                }
+            }
+        }
+
+        &-btn{
+            margin-top: 80px;
+            button{
+                font-family: 'Exo 2';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 150%;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                color: #FFFFFF;
+                background: #0B7572;
+                border-radius: 4px;
+                padding: 10px 15px;
+                border: none
+            }
+        }
+    }
+}
+
+// I N F O - E N D //
+
+
+// V I D E O - S T A R T //
+
+.video{
+    margin-top: 100px;
+
+    &__title{
+        font-family: 'Exo 2';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 125%;
+        color: #363738;
+        margin-bottom: 32px;
+    }
+
+    &__subtitle{
+        font-family: 'PT Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #6B6B6C;
+        margin-bottom: 40px;
+    }
+}
+
+// V I D E O - E N D //
